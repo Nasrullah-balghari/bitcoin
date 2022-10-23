@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto.com</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+
+</head>
+
+<body onload="loading()">
+  <!-- loader -->
+  <div id="loading"></div>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light main_navbar">
+    <a class="navbar-brand nav_logo" href="#"><img src="./assets/logo.svg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nabar_text" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">NFT <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Prices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Company</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Learn</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sub-logo">
+      <div class="svg-logo">
+        <img class="icon-logo"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuMzk1NTggMjEuMjczNUwxMy43MzMyIDExLjY3OTJMNC40MDM0MSAyLjEwMjA1QzQuMTU0MjEgMi4yNTExNiA0IDIuNTk2MzkgNCAzLjA0ODNWMjAuMzM2NUM0LjAwMzM0IDIwLjc4ODQgNC4xNTE5OCAyMS4xMDg0IDQuMzk1NTggMjEuMjczNVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNC4wNjc2IDExLjQxNDNMMTYuODQ5IDguNTU2MDRMNS41MjIzIDIuMTc0MzRDNS4zMzE1OCAyLjA2MDQ3IDUuMTE0OTMgMi4wMDAzMyA0Ljg5NDI5IDJMMTQuMDY2NSAxMS40MTMxTDE0LjA2NzYgMTEuNDE0M1oiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNC4wNjczIDExLjk0NTNMNC44NjYwOSAyMS4zOTk3QzUuMDk3MDMgMjEuNDAzNyA1LjMyNDUxIDIxLjM0MTcgNS41MjMxNiAyMS4yMjA4TDE2Ljg3MjIgMTQuODIxOUwxNC4wNjczIDExLjk0NTNaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjAuOTUyMyAxMC44NzE4TDE3LjE4MzEgOC43NDQxNEwxNC4zMjU3IDExLjY4MDRMMTcuMjA0MyAxNC42MzQ5TDIwLjk1MTIgMTIuNTEzMUMyMS43NDc5IDEyLjA2MjMgMjEuNzQ3OSAxMS4zMjAyIDIwLjk1MjMgMTAuODcxOEgyMC45NTIzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg=="
+          alt="Android Play Store download icon" class="css-156wug1">
+        <img class="icon-logo"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwLjQ0ODYgMTcuNTg2MUMyMC4xMzE4IDE4LjI4NDggMTkuNzU2NyAxOC45MjggMTkuMzIyMiAxOS41MTkzQzE4LjcyOTggMjAuMzI1NSAxOC4yNDQ4IDIwLjg4MzUgMTcuODcxMSAyMS4xOTM0QzE3LjI5MTcgMjEuNzAyIDE2LjY3MDkgMjEuOTYyNSAxNi4wMDYxIDIxLjk3NzNDMTUuNTI4OSAyMS45NzczIDE0Ljk1MzMgMjEuODQ3NyAxNC4yODM0IDIxLjU4NDdDMTMuNjExMyAyMS4zMjMgMTIuOTkzNiAyMS4xOTM0IDEyLjQyODggMjEuMTkzNEMxMS44MzY0IDIxLjE5MzQgMTEuMjAxMiAyMS4zMjMgMTAuNTIxNyAyMS41ODQ3QzkuODQxMTEgMjEuODQ3NyA5LjI5Mjg3IDIxLjk4NDcgOC44NzM3MSAyMS45OTgzQzguMjM2MjMgMjIuMDI0MiA3LjYwMDgzIDIxLjc1NjMgNi45NjY1OCAyMS4xOTM0QzYuNTYxNzggMjAuODU2MyA2LjA1NTQ0IDIwLjI3ODYgNS40NDg4OCAxOS40NjAxQzQuNzk4MDggMTguNTg2IDQuMjYzMDMgMTcuNTcyNSAzLjg0Mzg3IDE2LjQxN0MzLjM5NDk2IDE1LjE2ODkgMy4xNjk5MiAxMy45NjAzIDMuMTY5OTIgMTIuNzkwMkMzLjE2OTkyIDExLjQ0OTggMy40NzMzMyAxMC4yOTM4IDQuMDgxMDYgOS4zMjUwOUM0LjU1ODY5IDguNTQ2OTYgNS4xOTQwOSA3LjkzMzE2IDUuOTg5MzUgNy40ODI1NUM2Ljc4NDYyIDcuMDMxOTUgNy42NDM5IDYuODAyMzMgOC41NjkyNiA2Ljc4NzYzQzkuMDc1NiA2Ljc4NzYzIDkuNzM5NTkgNi45MzcxNCAxMC41NjQ3IDcuMjMwOTVDMTEuMzg3NSA3LjUyNTc2IDExLjkxNTkgNy42NzUyNiAxMi4xNDc1IDcuNjc1MjZDMTIuMzIwNyA3LjY3NTI2IDEyLjkwNzYgNy41MDA0NSAxMy45MDI1IDcuMTUxOTRDMTQuODQzNCA2LjgyODc0IDE1LjYzNzUgNi42OTQ5MiAxNi4yODggNi43NDc2NEMxOC4wNTA4IDYuODgzNDMgMTkuMzc1MiA3LjU0Njc1IDIwLjI1NTkgOC43NDE3N0MxOC42Nzk0IDkuNjUzNiAxNy44OTk1IDEwLjkzMDcgMTcuOTE1IDEyLjU2OTFDMTcuOTI5MyAxMy44NDUyIDE4LjQxNDMgMTQuOTA3MSAxOS4zNjc0IDE1Ljc1MDNDMTkuNzk5NCAxNi4xNDE3IDIwLjI4MTggMTYuNDQ0MSAyMC44MTg1IDE2LjY1ODlDMjAuNzAyMSAxNi45ODEyIDIwLjU3OTMgMTcuMjg5OCAyMC40NDg2IDE3LjU4NjFaTTE2LjQwNTcgMi40MDAxMUMxNi40MDU3IDMuNDAwMzQgMTYuMDIyOSA0LjMzNDI1IDE1LjI1OTkgNS4xOTg2N0MxNC4zMzkgNi4yMjYyOSAxMy4yMjUyIDYuODIwMSAxMi4wMTc0IDYuNzI2NEMxMi4wMDIgNi42MDY0MSAxMS45OTMxIDYuNDgwMTEgMTEuOTkzMSA2LjM0NzRDMTEuOTkzMSA1LjM4NzE4IDEyLjQzMSA0LjM1OTU2IDEzLjIwODcgMy41MTkzNEMxMy41OTY5IDMuMDkzOTIgMTQuMDkwNyAyLjc0MDE5IDE0LjY4OTUgMi40NTgwMUMxNS4yODcgMi4xODAwNSAxNS44NTIyIDIuMDI2MzIgMTYuMzgzNyAyQzE2LjM5OTMgMi4xMzM3MSAxNi40MDU3IDIuMjY3NDQgMTYuNDA1NyAyLjQwMDFWMi40MDAxMVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="
+          alt="Apple iOS download icon" class="css-156wug1">
+  </nav>
+  <!-- top-section -->
+  <section>
+    <div>
+      <h1 class="h1_text">The World’s Fastest Growing <br>
+        Crypto App</h1>
+    </div>
+    <br>
+    <div id="svg_and_text">
+      <svg style="color: white;" width="1em" height="1em" viewBox="0 0 14 10" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M12.76 2.366l-6.48 6.4A.828.828 0 015.7 9a.828.828 0 01-.581-.234l-3.879-4a.785.785 0 010-1.132.836.836 0 011.161 0L5.7 7.068l5.9-5.834a.836.836 0 011.16 0c.321.313.321.82 0 1.132z"
+          fill="currentColor"></path>
+        <path
+          d="M12.76 2.366l-6.48 6.4A.828.828 0 015.7 9a.828.828 0 01-.581-.234l-3.879-4a.785.785 0 010-1.132.836.836 0 011.161 0L5.7 7.068l5.9-5.834a.836.836 0 011.16 0c.321.313.321.82 0 1.132"
+          stroke="currentColor" stroke-width="0.5"></path>
+      </svg>
+      <p>Join <span class="text_blue">50m+</span>users buying and selling <span class="text_blue">250+ cryptocurrencies
+          at true cost</span></p>
+    </div>
+    <div id="svg_and_text">
+      <svg style="color: white;" width="1em" height="1em" viewBox="0 0 14 10" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M12.76 2.366l-6.48 6.4A.828.828 0 015.7 9a.828.828 0 01-.581-.234l-3.879-4a.785.785 0 010-1.132.836.836 0 011.161 0L5.7 7.068l5.9-5.834a.836.836 0 011.16 0c.321.313.321.82 0 1.132z"
+          fill="currentColor"></path>
+        <path
+          d="M12.76 2.366l-6.48 6.4A.828.828 0 015.7 9a.828.828 0 01-.581-.234l-3.879-4a.785.785 0 010-1.132.836.836 0 011.161 0L5.7 7.068l5.9-5.834a.836.836 0 011.16 0c.321.313.321.82 0 1.132"
+          stroke="currentColor" stroke-width="0.5"></path>
+      </svg>
+      <p>Spend with the Crypto.com Visa Card and <span class="text_blue">get up to 5%</span> back</p>
+    </div>
+    <div id="svg_and_text">
+      <svg style="color: white;" width="1em" height="1em" viewBox="0 0 14 10" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M12.76 2.366l-6.48 6.4A.828.828 0 015.7 9a.828.828 0 01-.581-.234l-3.879-4a.785.785 0 010-1.132.836.836 0 011.161 0L5.7 7.068l5.9-5.834a.836.836 0 011.16 0c.321.313.321.82 0 1.132z"
+          fill="currentColor"></path>
+        <path
+          d="M12.76 2.366l-6.48 6.4A.828.828 0 015.7 9a.828.828 0 01-.581-.234l-3.879-4a.785.785 0 010-1.132.836.836 0 011.161 0L5.7 7.068l5.9-5.834a.836.836 0 011.16 0c.321.313.321.82 0 1.132"
+          stroke="currentColor" stroke-width="0.5"></path>
+      </svg>
+      <p>Grow your portfolio by <span class="text_blue"> receiving rewards up to 14.5%</span> on your crypto assets</p>
+    </div>
+  </section>
+  <div class="app_logo">
+    <img class="apple" src="./assets/download.png" alt="">
+    <img class="apple" src="./assets/download (1).png" alt="">
+    <img class="scan" src="./assets/download (2).png" alt="">
+  </div>
+  <br>
+  <div class="mobile">
+    <img src="./assets/buy-and-sell.webp" alt="">
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="median_text">
+    <span class="security">SECURELY BUY, SELL, STORE, SEND and TRACK</span> <br>
+    <h1>Buy crypto at true cost</h1> <br>
+    <p>Buy and sell 250+ cryptocurrencies with 20+ fiat currencies <br> using bank transfers or your credit/debit card.
+    </p>
+  </div>
+
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

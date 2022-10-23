@@ -1,0 +1,169 @@
+/* loader */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url(./assets/Spinner-5.gif) no-repeat center;
+    z-index: 100;
+}
+.main_navbar {
+    background-color: rgb(6, 17, 33) !important;
+} 
+body {
+    background-color:rgb(6, 17, 33)!important;
+    color: white;
+    font-family: Poppins-Regular;
+}
+.nabar_text {
+    margin-left: 20%;
+}
+.nabar_text ul li {
+    padding: 5px;
+    
+    
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./Poppins-Regular.ttf);
+}
+nav{
+    flex-wrap: wrap;
+}
+.nabar_text a {
+    color: #bdc3c7 !important;
+}
+.nabar_text ul li :hover {
+    color: white !important;
+}
+.nav_logo {
+    margin-left: 10%;
+    font-size: 15px !important;
+}
+.sub-logo {
+    display: flex;
+    align-items: center;
+}
+img {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.icon-logo {
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+}
+.svg-logo {
+    margin-right: 100px;
+    display: flex;
+   
+}
+img.icon-logo {
+    padding: 10px;
+    margin-left: 10px;
+}
+.icon-logo:hover {
+    background-color: #3498db;
+    -webkit-transition: all .3s ease-in;
+    cursor: pointer;
+}
+.h1_text {
+    color: white;
+    text-align: center;
+}
+.h1_text {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: revert;
+    margin-top: 15%;
+    flex-wrap: wrap;
+}
+svg {
+    border: 1px solid #4b7bec;
+    border-radius: 50%;
+    background-color: #4b7bec;
+}
+.text_blue {
+    color: #45aaf2;
+}
+#svg_and_text {
+    color: white;
+    display: flex;  
+}
+#svg_and_text {
+    color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+#svg_and_text p {
+    margin-left: 10px;
+}
+div#svg_and_text {
+    line-height: normal;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.app_logo {
+    font-size: 60px;
+    /* display: flex; */
+    flex-wrap: wrap;
+    text-align: center;
+}
+.apple {
+    height: 40px;
+}
+.scan {
+    height: 60px;
+}
+.mobile {
+    text-align: center;
+}
+.mobile img {
+    width: 40%;
+    height: 900px;
+}
+.security {
+    color: #1e90ff;
+}
+.median_text {
+    text-align: center;
+    color: white;
+    flex-wrap: wrap;
+}
+.median_text h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+span.navbar-toggler-icon {
+    background-color: white;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px){
+    .mobile img{
+        width: 100%;
+        height: 700px;
+    }
+}
+@media only screen and (max-width: 990px){
+   .sub-logo {
+    display: none;
+   }
+}
